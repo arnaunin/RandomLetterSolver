@@ -9,6 +9,8 @@ This program generates random letters until they match a user-provided word. It 
 4. When a valid word is entered, the program will start generating random letters to form words.
 5. Once your word is formed, the program will notify you and indicate how many words were generated to match the entered word.
 
+![Outputs](images/Outputs_RandomLetterSolver.png)
+
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
