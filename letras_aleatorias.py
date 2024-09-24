@@ -1,29 +1,39 @@
-### Falta traducir los comentario y añadir mas comprovaciones para la palabra introducida
-
 import random as rd
 import string as str
 import time
 
-counter = 0 # Contador de palabras generadas 
-string = '' # Variable en la que se almacena la palabra generada
-word = input("Introduce un palabra con un maximo de 5 letras: ")
+counter = 0 # Generated word counter 
+string = '' # Variable in which the generated word is stored
+valid = False # Variable that checks if the word is valid
 
-# Comprovamos que la palabra introducida tenga 5 o menos letras
-while len(word) > 5:
-    word = input("Introduce un palabra con un maximo de 5 letras: ")
+# Checks
+while valid == False:
+    word = input("Enter a word with a maximum of 5 letters: ")
+    word = word.lower() # We convert all letters to lowercase
+    if len(word) <= 5: # Lenght check
+        for letter in word: # Check symbol by symbol if they are all letters
+            if letter in str.ascii_lowercase:
+                valid = True # While the checked symbols are letters, valid is True
+            else: # If a symbol is not a letter
+                print("ERROR: Invalid word.") # ERROR
+                valid = False
+                break # We go out of the loop
+    else: # If the word has more than 5 symbols
+        print("ERROR: Invalid word.")
 
-# Imprimimos un mensaje de espera ya que la ejecución puede tardar unos segundos
-print("Espera a que se termine de ejecutar el codigo.")
+# We show a waiting message since the execution may take a few seconds
+print("Wait for the code to finish running.")
 time.sleep(2)
 
-# Bucle para ir generando palabras y comprovando si es la palabra introducida mientras la palabra resultante no sea igual a la introducida
+# While loop to generate words and check if it is the entered word while the resulting word is not equal to the entered one
 while string != word:
-    counter += 1 # Actualizamos contador
-    string = '' # Vaciamos la variable ya que se va a generar una palabra nueva
+    counter += 1 # Counter update
+    string = '' # We empty the variable since a new word is going to be generated
 
-    # Bucle para ir generando letras hasta que la palabra tenga la la longituud de a palabra intrudcida
+    # For loop to generate letters until the word is the length of the inserted word
     for i in range(len(word)):
-        letter = rd.choice(str.ascii_lowercase) # Generamos una letra minuscula aleatoria
-        string += letter # Añadimos la letra a la string
+        letter = rd.choice(str.ascii_lowercase) # Random lowercase letter
+        string += letter # We add the letter to the string
 
-print(f"Intentos requeridos para genrar la palabra {word}: {counter}")
+# Output message
+print(f"Attempts required to generate the word {word}: {counter}")
