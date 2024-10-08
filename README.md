@@ -11,6 +11,28 @@ This program generates random letters until they match a user-provided word. It 
 
 ![Outputs](images/Outputs_RandomLetterSolver.png)
 
+## Installation and execution
+1. Clone this repository:
+   ```
+   https://github.com/arnaunin/RandomLetterSolver.git
+   ```
+2. Install the necessary dependencies (if any):
+   ```
+   pip install -r requirements.txt
+   ```
+3. Navigate into the cloned repository
+   ```
+   cd path_to_repository/
+   ```
+4. Run the project:
+   ```
+   python letras_aleatorias.py
+   ```
+   or
+   ```
+   python3 letras_aleatorias.py
+   ```
+
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
