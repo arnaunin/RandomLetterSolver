@@ -14,7 +14,7 @@ This program generates random letters until they match a user-provided word. It 
 ## Installation and execution
 1. Clone this repository:
    ```
-   https://github.com/arnaunin/RandomLetterSolver.git
+   git clone https://github.com/arnaunin/RandomLetterSolver.git
    ```
 2. Install the necessary dependencies (if any):
    ```
